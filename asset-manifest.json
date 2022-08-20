@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/todoList_MUI/static/css/main.e6c13ad2.css",
+    "main.js": "/todoList_MUI/static/js/main.ba4bba0e.js",
+    "index.html": "/todoList_MUI/index.html",
+    "main.e6c13ad2.css.map": "/todoList_MUI/static/css/main.e6c13ad2.css.map",
+    "main.ba4bba0e.js.map": "/todoList_MUI/static/js/main.ba4bba0e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.ba4bba0e.js"
+  ]
+}
