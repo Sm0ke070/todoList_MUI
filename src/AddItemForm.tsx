@@ -9,14 +9,14 @@ type AddItemFormPropsType = {
 export function AddItemForm(props: AddItemFormPropsType) {
 
     let [title, setTitle] = useState("")
-    let [error, setError] = useState<string | null>(null)
+    let [error, setError] = useState<boolean>(false)
 
     const addItem = () => {
         if (title.trim() !== "") {
             props.addItem(title);
             setTitle("");
         } else {
-            setError("Title is required");
+            setError(true);
         }
     }
 
@@ -25,7 +25,7 @@ export function AddItemForm(props: AddItemFormPropsType) {
     }
 
     const onKeyPressHandler = (e: KeyboardEvent<HTMLInputElement>) => {
-        setError(null);
+        setError(false);
         if (e.charCode === 13) {
             addItem();
         }
@@ -35,10 +35,10 @@ export function AddItemForm(props: AddItemFormPropsType) {
         <TextField
             variant='outlined'
             value={title}
-            label={"Title"}
+            label={error?"Title is required":"Add Title"}
             onChange={onChangeHandler}
             onKeyPress={onKeyPressHandler}
-            error={!!error}
+            error={error}
             helperText={error}
         />
         <IconButton
